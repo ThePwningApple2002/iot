@@ -6,7 +6,7 @@
 
 const char* ssid = "Stanimirovic Household 2.4Ghz";
 const char* password = "mgmivela";
-const char* openaiApiKey = "sk-proj-qpa2J1ABF1xkZGr0YVzmT3BlbkFJIobJvElHe1KsLtqdP8KW";
+const char* openaiApiKey = "api";
 
 WiFiSSLClient sslClient;
 HttpClient httpClient = HttpClient(sslClient, "api.openai.com", 443);
