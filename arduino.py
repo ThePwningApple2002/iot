@@ -3,7 +3,7 @@ import serial
 from time import sleep
 from openai import OpenAI
  # should use env variable OPENAI_API_KEY
-client = OpenAI(api_key="sk-proj-SElpyijA7hjAWrso1wD1T3BlbkFJYvfxb3B3SdqZbyqaqnIN") 
+client = OpenAI(api_key="api_key") 
 ser = serial.Serial("COM3", 9600 )
 sleep(2)
 
@@ -22,4 +22,3 @@ while True:
   print(completion)
 
         
-#sk-proj-SElpyijA7hjAWrso1wD1T3BlbkFJYvfxb3B3SdqZbyqaqnIN
