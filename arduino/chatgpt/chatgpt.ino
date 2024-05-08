@@ -4,8 +4,8 @@
 #include <ArduinoHttpClient.h>
 #include <ArduinoJson.h>
 
-const char* ssid = "Stanimirovic Household 2.4Ghz";
-const char* password = "mgmivela";
+const char* ssid = "SSID";
+const char* password = "PASSWORD";
 const char* openaiApiKey = "api";
 String answer;
 WiFiSSLClient sslClient;
