@@ -7,7 +7,7 @@
 const char* ssid = "Stanimirovic Household 2.4Ghz";
 const char* password = "mgmivela";
 const char* openaiApiKey = "api";
-
+String answer;
 WiFiSSLClient sslClient;
 HttpClient httpClient = HttpClient(sslClient, "api.openai.com", 443);
 
@@ -26,16 +26,8 @@ void setup() {
 void loop() {
   Serial.println("Ask your question:");
   String question;
-  while (!Serial.available()) {
-    delay(100);
-  }
-  while (Serial.available()) {
-    char c = Serial.read();
-    if (c == '\n' || c == '\r') {
-      continue;
-    }
-    question += c;
-  }
+  question = Serial.readString();
+ 
 
   if (!question.isEmpty()) {
     Serial.println("Sending question to OpenAI: " + question);
